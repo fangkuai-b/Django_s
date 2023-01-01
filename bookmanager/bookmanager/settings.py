@@ -15,9 +15,12 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import book.apps
 
-
+# 当前工程的根目录，Django会依此来定位工程内的相关文件，我们也可以使用该参数来构造文件路径。
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# print(__file__)
+# print(os.path.abspath(__file__))
+# print(os.path.dirname(os.path.abspath(__file__)))
+# print(BASE_DIR)   F:\Django_s\bookmanager
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -28,8 +31,9 @@ SECRET_KEY = '@k5n=&438)%-2nr%()9q%czaskh5m5i8lj+19c9_c3cey2=m*m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# 默认是127.0.0.1，如果让本机访问可以加上本地ip
-ALLOWED_HOSTS = []
+# 允许以什么样的形式来访问我们的项目，默认是127.0.0.1，如果让本机访问可以加上本地ip
+# * 的意思是可以使用ip，也可以使用127.0.0.1
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
