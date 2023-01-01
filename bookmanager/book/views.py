@@ -13,4 +13,9 @@ from django.http import HttpResponse
 
 # 还需要定义路由即我们期望用户输入 http://127.0.0.1:8000/index 来访问我们的视图函数
 def index(request):
-    return HttpResponse('OK')
+    # return HttpResponse('OK')
+    # request, template_name, context = None, content_type = None, status = None, using = None
+    # request   请求
+    # template_name 模板名
+    # context = None
+    return render(request, 'book/index.html')
